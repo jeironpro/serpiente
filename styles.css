@@ -1,0 +1,103 @@
+body {
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.contenedor-juego {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.titulo h1 {
+    background: linear-gradient(to right, #ff5a5a 50%, #23ff36 100%);
+    border-radius: 5px;
+    color: #222;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.contenedor {
+    align-items: center;
+    background-color: #e1e1e1;
+    border: 1px solid #000;
+    border-radius: 3px;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+}
+
+.puntuacion {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.iniciar img {
+    width: 100px;
+    height: 100px;
+}
+
+.botones {
+    display: none;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 10px;
+}
+
+.botones button {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 20px;
+    pointer-events: none;
+    touch-action: none;
+}
+
+.botones i {
+    font-size: 20px;
+}
+
+.arriba {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.izquierda {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.abajo {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.derecha {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .botones {
+        display: grid;
+        gap: 30px;
+    }
+}
