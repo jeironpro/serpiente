@@ -62,9 +62,16 @@ const dibujar = () => {
     comidaElemento.className = 'comida';
     comidaElemento.style.left = (comida.x + 2) + 'px';
     comidaElemento.style.top = (comida.y + 2) + 'px';
+    contenedorJuego.appendChild(comidaElemento);
 };
 
-const comida = generarPosicionComida();
+// Variables de la interfaz final
+const pantallaFinal = document.getElementById("pantalla-final");
+const mensajeFinal = document.getElementById("mensaje-final");
+const puntosFinales = document.getElementById("puntos-finales");
+const botonReiniciar = document.getElementById("boton-reiniciar");
+
+let comida = generarPosicionComida();
 
 const mostrarFinJuego = (victoria) => {
     clearInterval(intervaloJuego);
