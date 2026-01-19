@@ -1,47 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" href="icon/serpiente.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="icon/serpiente.png" />
     <title>Serpiente</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <main>
-        <div class="contenedor-juego">
-            <div class="titulo">
-                <h1>Serpiente</h1>
+        <div class="contenedor-principal">
+            <div class="cabecera-juego">
+                <h1 class="titulo-principal">Serpiente</h1>
             </div>
-            <div id="serpiente" class="contenedor">
+            <div id="tablero-juego" class="tablero">
                 <!-- El juego se genera desde el JavaScript -->
-                <div id="iniciar" class="iniciar">
-                    <img src="icon/iniciar.png" alt="INICIAR">
+                <div id="boton-inicio" class="capa-inicio">
+                    <span class="material-symbols-rounded">play_arrow</span>
+                </div>
+                <!-- Pantalla de fin de juego -->
+                <div id="pantalla-final" class="pantalla-oculta">
+                    <h2 id="mensaje-final">¡FIN DEL JUEGO!</h2>
+                    <p id="puntos-finales">Puntos: 0</p>
+                    <button id="boton-reiniciar"><span class="material-symbols-rounded">refresh</span>
+                        REINTENTAR</button>
                 </div>
             </div>
-            <div id="puntuacion" class="puntuacion">
-                SCORE: 0 
-                <!-- La puntuacion se genera desde el JavaScript -->
+            <div class="panel-info">
+                <div id="puntuacion-actual" class="puntuacion">PUNTOS: 0</div>
             </div>
-    
-            <div class="botones">
-                <div id="arriba" class="arriba">
-                   <button><i class="fas fa-arrow-up"></i></button>
+            <div class="controles-tactiles">
+                <div class="fila-controles">
+                    <button id="ctrl-arriba" class="boton-direccion">
+                        <span class="material-symbols-rounded">arrow_upward</span>
+                    </button>
                 </div>
-                <div id="izquierda" class="izquierda">
-                    <button><i class="fas fa-arrow-left"></i></button>
-                </div>
-                <div id="abajo" class="abajo">
-                    <button><i class="fas fa-arrow-down"></i></button>
-                </div>
-                <div id="derecha" class="derecha">
-                    <button><i class="fas fa-arrow-right"></i></button>
+                <div class="fila-controles">
+                    <button id="ctrl-izquierda" class="boton-direccion">
+                        <span class="material-symbols-rounded">arrow_back</span>
+                    </button>
+                    <button id="ctrl-abajo" class="boton-direccion">
+                        <span class="material-symbols-rounded">arrow_downward</span>
+                    </button>
+                    <button id="ctrl-derecha" class="boton-direccion">
+                        <span class="material-symbols-rounded">arrow_forward</span>
+                    </button>
                 </div>
             </div>
         </div>
     </main>
     <script src="js/app.js"></script>
-    <script src="https://kit.fontawesome.com/25da21ab57.js" crossorigin="anonymous"></script>
 </body>
 </html>
