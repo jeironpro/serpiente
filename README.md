@@ -1,4 +1,4 @@
-# serpiente
+# juego-serpiente
 
 ## 📌 Descripción
 Este proyecto forma parte de mi portafolio personal.  
